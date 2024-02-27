@@ -52,7 +52,7 @@
         </a>
         <div class="navbar-dropdown">
           <a class="navbar-item" href="https://github.com/tonyckc/SDDG/">
-            Domain Generalization with Small Data
+            Learning Robust Shape Regularization for Generalizable Medical Image Segmentation
           </a>
         </div>
       </div>
@@ -67,18 +67,21 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Domain Generalization with Small Data<br>
+          <h1 class="title is-1 publication-title">Learning Robust Shape Regularization for Generalizable Medical Image Segmentation<br>
             <small>
-              <span style="font-size: 60%;">International Journal of Computer Vision (IJCV) 2024</span>
+              <span style="font-size: 60%;">IEEE Transactions on Medical Imaging (TMI) 2024</span>
             </small>
           </h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://tonyckc.github.io/">Kecheng Chen</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://eng.ox.ac.uk/people/elena-gal/">Elena Gal</a><sup>2</sup>,</span>
+              <a href="https://scholars.cityu.edu.hk/en/persons/tiexin-qin(138e2d5e-f3dc-4711-97a5-f022b5c02f21).html">Tiexin Qin</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://www.ee.cityu.edu.hk/~hpyan/">Hong Yan</a><sup>1</sup>,</span>
+              <a href="https://oncology.med.hku.hk/en/Our-Team/Academic-Staff/Professor-Victor-Ho-fun-LEE/Dr-Victor-Ho-fun-LEE-Profile">Victor Ho-Fun Lee</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.ee.cityu.edu.hk/~hpyan/">Hong Yan</a><sup>1</sup>
+            </span>
             <span class="author-block">
               <a href="https://hlli1991.github.io/">Haoliang Li</a><sup>1</sup>
             </span>
@@ -86,7 +89,7 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup> Department of Electrical Engineering, City University of  Hong Kong</span><br>
-            <span class="author-block"><sup>2</sup> Department of Mathematics,  University of Oxford</span><br>
+            <span class="author-block"><sup>2</sup> LKS Faculty of Medicine, The University of Hong Kong</span><br>
           </div>
 
           <div class="column has-text-centered">
@@ -105,7 +108,7 @@
               <!-- Code Link. -->
               <span class="tooltip">
               <span class="link-block">
-                <a href="https://github.com/tonyckc/SDDG-code/"
+                <a href="https://github.com/tonyckc/WT-PSE-code/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -140,16 +143,32 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            In this work, we propose to tackle the problem of domain generalization in the context of insufficient  samples. Instead of extracting latent feature embeddings based on deterministic models, we propose to
-learn a domain-invariant representation based on the probabilistic framework by mapping each data point into probabilistic embeddings. Specifically, we first extend empirical maximum mean discrepancy
-(MMD) to a novel probabilistic MMD that can measure the discrepancy between mixture distributions
-(i.e., source domains) consisting of a series of latent distributions rather than latent points. Moreover,
-instead of imposing the contrastive semantic alignment (CSA) loss based on pairs of latent points,
-a novel probabilistic CSA loss encourages positive probabilistic embedding pairs to be closer while
-pulling other negative ones apart. Benefiting from the learned representation captured by probabilistic
-models, our proposed method can marriage the measurement on the distribution over distributions
-(i.e., the global perspective alignment) and the distribution-based contrastive semantic alignment
-(i.e., the local perspective alignment)
+            Generalizable medical image segmentation enables
+models to generalize to unseen target domains under domain
+shift issues. Recent progress demonstrates that the shape of the
+segmentation objective, with its high consistency and robustness
+across domains, can serve as a reliable regularization to aid
+the model for better cross-domain performance, where existing
+methods typically seek a shared framework to render segmentation
+maps and shape prior concurrently. However, due to the inherent
+texture and style preference of modern deep neural networks, the
+edge or silhouette of the extracted shape will inevitably be under-
+mined by those domain-specific texture and style interferences of
+medical images under domain shifts. To address this limitation,
+we devise a novel framework with a separation between the shape
+regularization and the segmentation map. Specifically, we first
+customize a novel whitening transform-based probabilistic shape
+regularization extractor namely WT-PSE to suppress undesirable
+domain-specific texture and style interferences, leading to more
+robust and high-quality shape representations. Second, we deliver
+a Wasserstein distance-guided knowledge distillation scheme to
+help the WT-PSE to achieve more flexible shape extraction during
+the inference phase. Finally, by incorporating domain knowledge
+of medical images, we propose a novel instance-domain whitening
+transform method to facilitate a more stable training process with
+improved performance. Experiments demonstrate the performance
+of our proposed method on both multi-domain and single-domain
+generalization.
           </p>
         </div>
       </div>
@@ -169,8 +188,7 @@ models, our proposed method can marriage the measurement on the distribution ove
                   <img src="assets/fig2.PNG" alt="Figure 1"  width="100%"/>
                 </div>
                 <div class="content has-text-justified">
-                  <p> A visualized computational process for probabilistic MMD (P-MMD) on two source domains. The same color for
-samples in different domains denote the same label. </p>
+                  <p> Overall framework of the proposed method for generalizable medical image segmentation. </p>
                 </div>
             </div>
           </div>
@@ -188,12 +206,12 @@ samples in different domains denote the same label. </p>
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{kecheng2024ijcv,
-  title={Domain Generalization with Small Data},
-  author={Kecheng Chen, Elena Gal, Hong Yan, and Haoliang Li},
-  journal={International Journal of Computer Vision},
+    <pre><code>@article{kecheng2024tmi,
+  title={Learning Robust Shape Regularization for Generalizable Medical Image Segmentation},
+  author={Kecheng Chen, Tiexin Qin, Victor Ho-Fun Lee, Hong Yan, and Haoliang Li},
+  journal={IEEE Transactions on Medical Imaging},
   year={2024},
-  publisher={Springer}
+  publisher={IEEE}
 }</code></pre>
   </div>
 </section>
