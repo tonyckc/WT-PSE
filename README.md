@@ -1,15 +1,15 @@
 # SDDG
 
-This is the repository that contains source code for the project page of [SDDG](https://tonyckc.github.io/SDDG/).
+This is the repository that contains source code for the project page of [WT-PSE](https://tonyckc.github.io/WT-PSE/).
 
 If you find SDDG useful for your work please cite:
 ```
-@article{kecheng2024ijcv,
-  title={Domain Generalization with Small Data},
-  author={Kecheng Chen, Elena Gal, Hong Yan, and Haoliang Li},
-  journal={International Journal of Computer Vision},
+@article{kecheng2024TMI,
+  title={Learning Robust Shape Regularization for Generalizable Medical Image Segmentation},
+  author={Kecheng Chen, Tiexin Qin, Victor Ho-Fun Lee, Hong Yan, and Haoliang Li},
+  journal={IEEE Transactions on Medical Imaging},
   year={2024},
-  publisher={Springer}
+  publisher={IEEE}
 }
 ```
 
