@@ -1,4 +1,4 @@
-# SDDG
+# WT-PSE
 
 This is the repository that contains source code for the project page of [WT-PSE](https://tonyckc.github.io/WT-PSE/).
 
