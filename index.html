@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Domain Generalization with Small Data">
+  <meta name="keywords" content="Small Data, Domain Generalization, Bayesian Networks">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Domain Generalization with Small Data</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/video_comparison.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://tonyckc.github.io/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://github.com/tonyckc/SDDG/">
+            Domain Generalization with Small Data
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Domain Generalization with Small Data<br>
+            <small>
+              <span style="font-size: 60%;">International Journal of Computer Vision (IJCV) 2024</span>
+            </small>
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://tonyckc.github.io/">Kecheng Chen</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://eng.ox.ac.uk/people/elena-gal/">Elena Gal</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.ee.cityu.edu.hk/~hpyan/">Hong Yan</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://hlli1991.github.io/">Haoliang Li</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup> Department of Electrical Engineering, City University of  Hong Kong</span><br>
+            <span class="author-block"><sup>2</sup> Department of Mathematics,  University of Oxford</span><br>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2402.06150.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!--/ PDF Link. -->
+              <!-- Code Link. -->
+              <span class="tooltip">
+              <span class="link-block">
+                <a href="https://github.com/tonyckc/SDDG-code/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code Details</span>
+                  </a>
+              <!--/ Code Link. -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Figure_1. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div style="text-align: center;">
+          <img src="assets/fig1.PNG" alt="Figure 1"  width="60%"/>
+        </div>
+      </div>
+    </div>
+    <!--/ Figure_1. -->
+    
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            In this work, we propose to tackle the problem of domain generalization in the context of insufficient  samples. Instead of extracting latent feature embeddings based on deterministic models, we propose to
+learn a domain-invariant representation based on the probabilistic framework by mapping each data point into probabilistic embeddings. Specifically, we first extend empirical maximum mean discrepancy
+(MMD) to a novel probabilistic MMD that can measure the discrepancy between mixture distributions
+(i.e., source domains) consisting of a series of latent distributions rather than latent points. Moreover,
+instead of imposing the contrastive semantic alignment (CSA) loss based on pairs of latent points,
+a novel probabilistic CSA loss encourages positive probabilistic embedding pairs to be closer while
+pulling other negative ones apart. Benefiting from the learned representation captured by probabilistic
+models, our proposed method can marriage the measurement on the distribution over distributions
+(i.e., the global perspective alignment) and the distribution-based contrastive semantic alignment
+(i.e., the local perspective alignment)
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="column is-centered has-text-centered">
+      <h2 class="title is-3">Framework</h2>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <section class="hero is-light is-small">
+          <div class="hero-body">
+            <div class="container">
+                <div style="text-align: center;">
+                  <img src="assets/fig2.PNG" alt="Figure 1"  width="100%"/>
+                </div>
+                <div class="content has-text-justified">
+                  <p> A visualized computational process for probabilistic MMD (P-MMD) on two source domains. The same color for
+samples in different domains denote the same label. </p>
+                </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+
+  </div>
+</section>
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{kecheng2024ijcv,
+  title={Domain Generalization with Small Data},
+  author={Kecheng Chen, Elena Gal, Hong Yan, and Haoliang Li},
+  journal={International Journal of Computer Vision},
+  year={2024},
+  publisher={Springer}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+<!--     <div class="content has-text-centered"> -->
+<!--       <a class="icon-link"
+         href="https://camera.pku.edu.cn/Publication.htm">
+        <i class="fas fa-file-pdf"></i>
+      </a> -->
+<!--       <a class="icon-link" href="https://github.com/tonyckc" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
+<!--     </div> -->
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/tonyckc/SDDG">source code</a> of this website,
+            we just ask that you link back to this page in the footer. Some of the source code of this 
+            website is borrowed from <a href="https://nerfies.github.io">nerfies</a> and <a href="https://dorverbin.github.io/refnerf/">Ref-NeRF</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
