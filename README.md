@@ -1,8 +1,8 @@
 # WT-PSE
 
-This is the repository that contains source code for the project page of [WT-PSE](https://tonyckc.github.io/WT-PSE/).
+This is the repository that contains the source code for the project page of [WT-PSE](https://tonyckc.github.io/WT-PSE/).
 
-If you find SDDG useful for your work please cite:
+If you find WT-PSE useful for your work please cite:
 ```
 @article{kecheng2024TMI,
   title={Learning Robust Shape Regularization for Generalizable Medical Image Segmentation},
